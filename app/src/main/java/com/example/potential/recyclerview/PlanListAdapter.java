@@ -30,7 +30,7 @@ public class PlanListAdapter extends RecyclerView.Adapter<PlanListAdapter.PlanVi
 
     @Override
     public int getItemCount() {
-        return 0;
+        return 1;
     }
 
     public class PlanViewHolder extends RecyclerView.ViewHolder {
@@ -49,6 +49,7 @@ public class PlanListAdapter extends RecyclerView.Adapter<PlanListAdapter.PlanVi
         }
 
         public void bindTo() {
+            planTitle.setText("bihi");
         }
     }
 }

@@ -14,27 +14,15 @@ import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
-    private PlanListAdapter planListAdapter;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        createRecyclerView();
+        startActivity(new Intent(this, ScrollingActivity.class));
+
 
     }
 
-    /**
-     * Creates the recycler view for the word items.
-     */
-    private void createRecyclerView() {
-        recyclerView = findViewById(R.id.recyclerview);
-        planListAdapter = new PlanListAdapter();
-        recyclerView.setAdapter(planListAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-    }
 }
