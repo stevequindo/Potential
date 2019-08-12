@@ -7,3 +7,4 @@ Ideas note:
 - reminder notifications to the user of his purpose of setting that plan in the first place, strucutred into a sentence that is motivational
 - the recyclerview item should show the number of days till the deadline 
 - objectives and task help reduce the goal to be more manageable, attainable and clear. "Have more clarity with your goal, add objectives and tasks" --> this will have to be some tutorial at the beginning. and information button after the tutorial is done to recap what each component means
+- learn how to do databinding 
