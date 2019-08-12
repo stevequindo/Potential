@@ -14,4 +14,12 @@ public class Task {
     public Task(String reminderDescription) {
         this.reminderDescription = reminderDescription;
     }
+
+    public String getReminderDescription() {
+        return reminderDescription;
+    }
+
+    public void setReminderDescription(String reminderDescription) {
+        this.reminderDescription = reminderDescription;
+    }
 }

@@ -13,10 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;
 
+import java.util.ArrayList;
+
 public class ScrollingActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private PlanListAdapter planListAdapter;
+    private ArrayList<Plan> planArrayList = new ArrayList<>();
 
 
     @Override
@@ -33,9 +36,22 @@ public class ScrollingActivity extends AppCompatActivity {
 
             }
         });
-
+        
+        createFakePlanList();
         createRecyclerView();
 
+    }
+
+    private void createFakePlanList() {
+        for (int i=0; i < 20; i++) {
+            Task task = new Task("Wake up early in the morning");
+            Objective objective = new Objective("FirstObjective", task, "objectiveDeadline");
+            Goal goal = new Goal(objective, "I want to be able to give money");
+            Plan plan = new Plan("Toilet Paper" + i, goal, "startDateOfPlan");
+
+            planArrayList.add(plan);
+
+        }
     }
 
     /**
@@ -43,7 +59,7 @@ public class ScrollingActivity extends AppCompatActivity {
      */
     private void createRecyclerView() {
         recyclerView = findViewById(R.id.recyclerview);
-        planListAdapter = new PlanListAdapter();
+        planListAdapter = new PlanListAdapter(planArrayList);
         recyclerView.setAdapter(planListAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

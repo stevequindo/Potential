@@ -5,15 +5,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.potential.Plan;
 import com.example.potential.R;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class PlanListAdapter extends RecyclerView.Adapter<PlanListAdapter.PlanViewHolder> {
 
+    private ArrayList<Plan> planArrayList;
+
+    public PlanListAdapter(ArrayList<Plan> planArrayList) {
+        this.planArrayList = planArrayList;
+    }
 
     @NonNull
     @Override
@@ -24,13 +30,14 @@ public class PlanListAdapter extends RecyclerView.Adapter<PlanListAdapter.PlanVi
 
     @Override
     public void onBindViewHolder(@NonNull PlanViewHolder holder, int position) {
-        holder.bindTo();
+        holder.bindTo(planArrayList.get(position));
 
     }
 
     @Override
     public int getItemCount() {
-        return 1;
+        if (planArrayList != null) return planArrayList.size();
+        else return 0;
     }
 
     public class PlanViewHolder extends RecyclerView.ViewHolder {
@@ -48,8 +55,9 @@ public class PlanListAdapter extends RecyclerView.Adapter<PlanListAdapter.PlanVi
 
         }
 
-        public void bindTo() {
-            planTitle.setText("bihi");
+        public void bindTo(Plan plan) {
+            planTitle.setText(plan.getPlanName());
+            goalPotential.setText(plan.getGoal().getPurpose());
         }
     }
 }
