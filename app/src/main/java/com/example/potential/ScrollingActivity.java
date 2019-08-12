@@ -5,14 +5,15 @@ import android.os.Bundle;
 
 import com.example.potential.recyclerview.PlanListAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -36,12 +37,11 @@ public class ScrollingActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoActivityToCreateNewPlan();
+                gotoCreateNewPlanActivity();
 
             }
         });
-        
-        createFakePlanList();
+
         createRecyclerView();
         listenForItemClicks();
 
@@ -50,20 +50,11 @@ public class ScrollingActivity extends AppCompatActivity {
     /**
      * Goes to the new activity where the user will create a new plan.
      */
-    private void gotoActivityToCreateNewPlan() {
+    private void gotoCreateNewPlanActivity() {
         Intent intent = new Intent(this, CreatePlanActivity.class);
         startActivityForResult(intent, NEW_PLAN_ACTIVITY_REQUEST_CODE);
     }
 
-    private void createFakePlanList() {
-        for (int i=0; i < 20; i++) {
-            Goal goal = new Goal("I want to be able to give money");
-            Plan plan = new Plan("Toilet Paper" + i, goal, "startDateOfPlan");
-
-            planArrayList.add(plan);
-
-        }
-    }
 
     /**
      * Creates the recycler view for the plan items.
@@ -81,8 +72,21 @@ public class ScrollingActivity extends AppCompatActivity {
         planListAdapter.setOnItemClickListener(new PlanListAdapter.ClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                // TODO: modify plan
+                // TODO: logic for modify plan
+                Toast.makeText(ScrollingActivity.this, "hi", Toast.LENGTH_SHORT).show();
             }
         });
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode ==  NEW_PLAN_ACTIVITY_REQUEST_CODE & resultCode == RESULT_OK) {
+            Plan plan = data.getParcelableExtra(CreatePlanActivity.EXTRA_REPLY);
+            planArrayList.add(plan);
+            planListAdapter.notifyItemInserted(planArrayList.size() - 1);
+        }
+    }
+
+
 }

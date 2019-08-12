@@ -26,7 +26,7 @@ public class PlanListAdapter extends RecyclerView.Adapter<PlanListAdapter.PlanVi
     @Override
     public PlanViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.planlist_item, parent, false);
-        return new PlanViewHolder(itemView, this);
+        return new PlanViewHolder(itemView);
     }
 
     @Override
@@ -44,20 +44,19 @@ public class PlanListAdapter extends RecyclerView.Adapter<PlanListAdapter.PlanVi
     public class PlanViewHolder extends RecyclerView.ViewHolder {
 
         private TextView planTitle;
-        private TextView goalPotential;
+        private TextView goalPurpose;
 
-        private PlanListAdapter planListAdapter;
 
-        public PlanViewHolder(@NonNull View itemView, PlanListAdapter adapter) {
+        public PlanViewHolder(@NonNull View itemView) {
             super(itemView);
             planTitle = itemView.findViewById(R.id.plan_title);
-            goalPotential = itemView.findViewById(R.id.goal_purpose);
-            planListAdapter = adapter;
+            goalPurpose = itemView.findViewById(R.id.goal_purpose);
 
         }
 
         public void bindTo(Plan plan) {
-
+            planTitle.setText(plan.getPlanName());
+            goalPurpose.setText(plan.getPurpose());
         }
 
     }
