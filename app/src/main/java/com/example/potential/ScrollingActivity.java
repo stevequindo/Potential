@@ -44,9 +44,7 @@ public class ScrollingActivity extends AppCompatActivity {
 
     private void createFakePlanList() {
         for (int i=0; i < 20; i++) {
-            Task task = new Task("Wake up early in the morning");
-            Objective objective = new Objective("FirstObjective", task, "objectiveDeadline");
-            Goal goal = new Goal(objective, "I want to be able to give money");
+            Goal goal = new Goal("I want to be able to give money");
             Plan plan = new Plan("Toilet Paper" + i, goal, "startDateOfPlan");
 
             planArrayList.add(plan);
