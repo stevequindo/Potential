@@ -1,5 +1,6 @@
 package com.example.potential;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.potential.recyclerview.PlanListAdapter;
@@ -17,6 +18,8 @@ import java.util.ArrayList;
 
 public class ScrollingActivity extends AppCompatActivity {
 
+    public static final int NEW_PLAN_ACTIVITY_REQUEST_CODE = 1;
+
     private RecyclerView recyclerView;
     private PlanListAdapter planListAdapter;
     private ArrayList<Plan> planArrayList = new ArrayList<>();
@@ -33,13 +36,23 @@ public class ScrollingActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                gotoActivityToCreateNewPlan();
 
             }
         });
         
         createFakePlanList();
         createRecyclerView();
+        listenForItemClicks();
 
+    }
+
+    /**
+     * Goes to the new activity where the user will create a new plan.
+     */
+    private void gotoActivityToCreateNewPlan() {
+        Intent intent = new Intent(this, CreatePlanActivity.class);
+        startActivityForResult(intent, NEW_PLAN_ACTIVITY_REQUEST_CODE);
     }
 
     private void createFakePlanList() {
@@ -53,7 +66,7 @@ public class ScrollingActivity extends AppCompatActivity {
     }
 
     /**
-     * Creates the recycler view for the word items.
+     * Creates the recycler view for the plan items.
      */
     private void createRecyclerView() {
         recyclerView = findViewById(R.id.recyclerview);
@@ -61,5 +74,15 @@ public class ScrollingActivity extends AppCompatActivity {
         recyclerView.setAdapter(planListAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+    }
+
+
+    private void listenForItemClicks() {
+        planListAdapter.setOnItemClickListener(new PlanListAdapter.ClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                // TODO: modify plan
+            }
+        });
     }
 }

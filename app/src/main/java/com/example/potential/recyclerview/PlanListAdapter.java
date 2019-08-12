@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class PlanListAdapter extends RecyclerView.Adapter<PlanListAdapter.PlanViewHolder> {
 
     private ArrayList<Plan> planArrayList;
+    private static ClickListener clickListener;
 
     public PlanListAdapter(ArrayList<Plan> planArrayList) {
         this.planArrayList = planArrayList;
@@ -56,8 +57,21 @@ public class PlanListAdapter extends RecyclerView.Adapter<PlanListAdapter.PlanVi
         }
 
         public void bindTo(Plan plan) {
-            planTitle.setText(plan.getPlanName());
-            goalPotential.setText(plan.getGoal().getPurpose());
+
         }
+
     }
+
+    /**
+     * Listener interface to listen to when an item in the recycle view has been clicked.
+     */
+    public interface ClickListener {
+        void onItemClick(View view, int position);
+    }
+
+    public void setOnItemClickListener(ClickListener clickListener) {
+        PlanListAdapter.clickListener = clickListener;
+    }
+
+
 }
