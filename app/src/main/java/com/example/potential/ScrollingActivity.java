@@ -67,13 +67,15 @@ public class ScrollingActivity extends AppCompatActivity {
 
     }
 
-
+    /**
+     * Sets the itemClickListener made in the PlanListAdapter on the adapter.
+     */
     private void listenForItemClicks() {
         planListAdapter.setOnItemClickListener(new PlanListAdapter.ClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 // TODO: logic for modify plan
-                Toast.makeText(ScrollingActivity.this, "hi", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ScrollingActivity.this, position+"", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -51,6 +51,12 @@ public class PlanListAdapter extends RecyclerView.Adapter<PlanListAdapter.PlanVi
             super(itemView);
             planTitle = itemView.findViewById(R.id.plan_title);
             goalPurpose = itemView.findViewById(R.id.goal_purpose);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    clickListener.onItemClick(view, getAdapterPosition());
+                }
+            });
 
         }
 
