@@ -15,7 +15,8 @@ public class Plan implements Parcelable {
     private String startDate;
 
     public Plan() {
-        System.out.println("Hello from master!");
+        System.out.println("Plan created!!!!!");
+
     }
 
     protected Plan(Parcel in) {
