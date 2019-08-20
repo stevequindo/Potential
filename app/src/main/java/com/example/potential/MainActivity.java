@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         System.out.println("First commit");
 
-        System.out.println(".....");
+        System.out.println("Second commit form github.");
         System.out.println("hi");
     }
 }
