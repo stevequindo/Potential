@@ -16,6 +16,7 @@ public class Plan implements Parcelable {
 
     public Plan() {
         System.out.println("Yes created!!!!!");
+        System.out.println("yesyeysyeys");
 
     }
 
