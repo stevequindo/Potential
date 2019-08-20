@@ -2,9 +2,7 @@ package com.example.potential;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,11 +10,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        System.out.println("First commit");
 
-        startActivity(new Intent(this, ScrollingActivity.class));
-
-
+        System.out.println("Second commit form github");
+        System.out.println("hisadasd");
     }
-
-
 }
