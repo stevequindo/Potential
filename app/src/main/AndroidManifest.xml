@@ -14,7 +14,7 @@
         <activity android:name=".CreatePlanActivity">
         </activity>
         <activity
-            android:name=".ScrollingActivity"
+            android:name=".MainActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -22,13 +22,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_scrolling"
-            android:theme="@style/AppTheme.NoActionBar">
-
         </activity>
     </application>
 
