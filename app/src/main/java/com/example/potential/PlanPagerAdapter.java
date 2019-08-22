@@ -10,6 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.PagerAdapter;
 
 public class PlanPagerAdapter extends PagerAdapter {
@@ -51,6 +52,7 @@ public class PlanPagerAdapter extends PagerAdapter {
         purpose.setText(plans.get(position).getPurpose());
 
         container.addView(view, 0);
+
         return view;
     }
 

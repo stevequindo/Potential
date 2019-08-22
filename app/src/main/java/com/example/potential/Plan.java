@@ -24,6 +24,7 @@ public class Plan implements Parcelable {
         startDate = in.readString();
     }
 
+
     public static final Creator<Plan> CREATOR = new Creator<Plan>() {
         @Override
         public Plan createFromParcel(Parcel in) {
