@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.card.MaterialCardView;
+
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -14,6 +16,8 @@ import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.PagerAdapter;
 
 public class PlanPagerAdapter extends PagerAdapter {
+
+    public static final boolean INSTANTIATED = false;
 
     private List<Plan> plans;
     private Context context;
@@ -40,21 +44,26 @@ public class PlanPagerAdapter extends PagerAdapter {
         layoutInflater = LayoutInflater.from(context);
         View view = layoutInflater.inflate(R.layout.plan_item, container, false);
 
-        ImageView imageView;
-        TextView planName, purpose;
-
-        imageView = view.findViewById(R.id.image);
-        planName = view.findViewById(R.id.title);
-        purpose = view.findViewById(R.id.purpose);
-
-        imageView.setImageResource(R.drawable.lightbulb);
-        planName.setText(plans.get(position).getPlanName());
-        purpose.setText(plans.get(position).getPurpose());
+//        ImageView imageView;
+//        TextView planName, purpose;
+//
+//        imageView = view.findViewById(R.id.image);
+//        planName = view.findViewById(R.id.title);
+//        purpose = view.findViewById(R.id.purpose);
+//
+//        imageView.setImageResource(R.drawable.lightbulb);
+//        planName.setText(plans.get(position).getPlanName());
+//        purpose.setText(plans.get(position).getPurpose());
+//
+//
+//        container.bringChildToFront(view);
 
         container.addView(view, 0);
 
+
         return view;
     }
+
 
 
 

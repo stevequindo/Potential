@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         plans = new ArrayList<>();
         plans.add(plan);
+        plans.add(plan);
 
         adapter = new PlanPagerAdapter(plans, this);
 
