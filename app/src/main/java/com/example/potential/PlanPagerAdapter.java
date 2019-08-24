@@ -43,20 +43,12 @@ public class PlanPagerAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         layoutInflater = LayoutInflater.from(context);
         View view = layoutInflater.inflate(R.layout.plan_item, container, false);
-
+//
 //        ImageView imageView;
 //        TextView planName, purpose;
 //
 //        imageView = view.findViewById(R.id.image);
-//        planName = view.findViewById(R.id.title);
-//        purpose = view.findViewById(R.id.purpose);
-//
 //        imageView.setImageResource(R.drawable.lightbulb);
-//        planName.setText(plans.get(position).getPlanName());
-//        purpose.setText(plans.get(position).getPurpose());
-//
-//
-//        container.bringChildToFront(view);
 
         container.addView(view, 0);
 
@@ -65,6 +57,10 @@ public class PlanPagerAdapter extends PagerAdapter {
     }
 
 
+    @Override
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        container.removeView((View)object);
+    }
 
 
 
