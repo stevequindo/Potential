@@ -5,21 +5,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0F0F0"
     tools:context=".MainActivity">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/bottom"
-        android:layout_width="326dp"
-        android:layout_height="418dp"
+        android:layout_width="314dp"
+        android:layout_height="421dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="204dp"
         android:elevation="4dp"
         android:translationZ="-2dp"
-        app:cardBackgroundColor="#E21515"
+        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </com.google.android.material.card.MaterialCardView>
+
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
@@ -29,6 +31,5 @@
         android:foregroundGravity="center"
         android:overScrollMode="never">
     </androidx.viewpager.widget.ViewPager>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
