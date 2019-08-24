@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         plans = new ArrayList<>();
         plans.add(plan);
         plans.add(plan);
+        plans.add(plan);
 
         adapter = new PlanPagerAdapter(plans, this);
 
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
 
         // Padding lets the other pages overlap
-        viewPager.setPadding(130, 0, 130, 0);
+        viewPager.setPadding(100, 0, 100, 0);
 
 
 

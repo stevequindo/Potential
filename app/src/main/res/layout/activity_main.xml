@@ -5,22 +5,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0F0F0"
+    android:background="#F0F0"
     tools:context=".MainActivity">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/bottom"
-        android:layout_width="314dp"
-        android:layout_height="421dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="204dp"
-        android:elevation="4dp"
-        android:translationZ="-2dp"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/bottom"
+            android:layout_width="314dp"
+            android:layout_height="421dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="204dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="4dp"
+            app:cardBackgroundColor="#FFFFFF"
+            android:translationZ="5dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.viewpager.widget.ViewPager
@@ -31,5 +41,6 @@
         android:foregroundGravity="center"
         android:overScrollMode="never">
     </androidx.viewpager.widget.ViewPager>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
