@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.google.android.material.card.MaterialCardView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -19,18 +20,21 @@ public class PlanPagerAdapter extends PagerAdapter {
 
     public static final boolean INSTANTIATED = false;
 
-    private List<Plan> plans;
+    private ArrayList<Plan> plans;
     private Context context;
     private LayoutInflater layoutInflater;
 
-    public PlanPagerAdapter(List<Plan> plans, Context context) {
+    public PlanPagerAdapter(ArrayList<Plan> plans, Context context) {
         this.plans = plans;
         this.context = context;
     }
 
     @Override
     public int getCount() {
-        return plans.size();
+        if (!plans.isEmpty()) {
+            return plans.size();
+        }
+        return 0;
     }
 
     @Override
