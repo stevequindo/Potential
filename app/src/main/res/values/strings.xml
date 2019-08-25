@@ -94,4 +94,7 @@
     <string name="plan_name_hint">Plan Name</string>
     <string name="purpose_hint">Purpose</string>
     <string name="goal_hint">Goal</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
