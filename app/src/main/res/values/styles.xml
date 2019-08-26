@@ -30,4 +30,15 @@ The margin is a simple delimiter between the words. -->
         <item name="android:textColor">@color/colorTextPrimary</item>
     </style>
 
+    <style name="name_your_plan">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#DE000000</item>
+    </style>
+
+    <style name="plan_name_caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#8A000000</item>
+    </style>
+
+
 </resources>
