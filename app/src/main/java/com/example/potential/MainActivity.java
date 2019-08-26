@@ -14,6 +14,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static boolean STARTING_ACTIVITY = false;
+
     ViewPager viewPager;
     PlanPagerAdapter adapter;
     ArrayList<Plan> plans = new ArrayList<>();
@@ -22,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         setViewPager();
         setFloatingActionButton();
@@ -49,8 +50,19 @@ public class MainActivity extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(view.getContext(), CreatePlanActivity.class));
+
+                if (!STARTING_ACTIVITY) {
+                    startActivity(new Intent(view.getContext(), CreatePlanActivity.class));
+                }
+
+                STARTING_ACTIVITY = true;
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        STARTING_ACTIVITY = false;
+        super.onResume();
     }
 }
