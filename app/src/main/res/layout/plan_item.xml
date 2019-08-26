@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <!--Used for reference to align this card view with the white back card view-->
-    <!--<include layout="@layout/white_back_drop"/>-->
+    <!--<include layout="@layout/white_back_drop_plan_list"/>-->
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/top"

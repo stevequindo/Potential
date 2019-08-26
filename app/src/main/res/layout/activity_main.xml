@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
 
-    <include layout="@layout/white_back_drop"/>
+    <include layout="@layout/white_back_drop_plan_list"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
