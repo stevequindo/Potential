@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.potential.createplan.CreatePlanActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         setViewPager();
         setFloatingActionButton();
+
 
 
     }
