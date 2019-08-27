@@ -21,6 +21,7 @@ public class CreatePlanActivity extends AppCompatActivity {
 
         ViewPager viewPager = findViewById(R.id.createPlanViewPager);
         viewPager.setAdapter(new CreatePlanViewPagerAdapter(getSupportFragmentManager()));
+        viewPager.setOffscreenPageLimit(2);
 
     }
 

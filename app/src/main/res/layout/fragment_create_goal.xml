@@ -21,7 +21,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/goal_desc_title"
+                android:id="@+id/purpose_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -35,7 +35,7 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
-                android:id="@+id/goal_desc_caption"
+                android:id="@+id/purpose_caption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -44,7 +44,7 @@
                 android:textAppearance="@style/create_plan_caption"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/goal_desc_title"/>
+                app:layout_constraintTop_toBottomOf="@+id/purpose_title"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -57,7 +57,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/goal_desc_caption">
+                app:layout_constraintTop_toBottomOf="@+id/purpose_caption">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"

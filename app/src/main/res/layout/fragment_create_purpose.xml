@@ -27,7 +27,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="32dp"
-                android:text="Name Your Plan"
+                android:text="What is your purpose?"
                 android:textAppearance="@style/create_plan_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.50"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:gravity="center"
-                android:text="This can be anything you want, don't\ninclude the word 'plan'."
+                android:text="@string/purpose_caption"
                 android:textAppearance="@style/create_plan_caption"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -52,10 +52,8 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="42dp"
                 android:layout_marginEnd="16dp"
-                android:hint="Plan Name"
-                app:counterEnabled="true"
-                app:counterMaxLength="25"
-                app:helperText="@string/plan_name_helper_text"
+                android:hint="Purpose"
+                app:helperText="@string/purpose_helper_text"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -64,9 +62,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text|textFilter"
-                    android:maxLength="25"
-                    android:maxLines="1"/>
+                    android:inputType="textMultiLine"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
