@@ -13,7 +13,8 @@ public class CreatePlanViewPagerAdapter extends FragmentPagerAdapter {
         fragments = new Fragment[] {
                 new CreatePlanNameFragment(),
                 new CreateGoalFragment(),
-                new CreatePurposeFragment()
+                new CreatePurposeFragment(),
+                new CreateDeadlineFragment()
         };
     }
 
@@ -24,7 +25,7 @@ public class CreatePlanViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 
 

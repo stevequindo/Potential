@@ -10,9 +10,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="plan_name_helper_text">e.g \"Weight Begone!\"</string>
-    <string name="goal_desc_caption">Don\'t include dates and times</string>
+    <string name="goal_desc_caption">Don\'t include dates and times\n</string>
     <string name="goal_desc_hint">Goal</string>
     <string name="goal_desc_helper_text">e.g \"To lose weight.\"</string>
     <string name="purpose_caption">What is your why? Your deeper reason\nto why you want to achieve this goal.</string>
     <string name="purpose_helper_text">e.g \"To be someone my mum would be proud of.\"</string>
+    <string name="deadline_caption">Select a time and day.</string>
 </resources>
