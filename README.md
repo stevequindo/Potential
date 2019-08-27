@@ -10,3 +10,4 @@ Ideas note:
 - learn how to do databinding 
 - create a onboarding feature 
 - option button for horizontal scrolling and vertical scrolling for the plans list
+- when creating a plan and they go back to the list of plans, if anything is wrriten it will be SAVED IN DRAFTS
