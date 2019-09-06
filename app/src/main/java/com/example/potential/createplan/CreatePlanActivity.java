@@ -20,7 +20,7 @@ public class CreatePlanActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create_plan);
 
         ViewPager viewPager = findViewById(R.id.createPlanViewPager);
-        viewPager.setAdapter(new CreatePlanViewPagerAdapter(getSupportFragmentManager()));
+        viewPager.setAdapter(new CreatePlanViewPagerAdapter(getSupportFragmentManager(), this));
         viewPager.setOffscreenPageLimit(3);
 
     }

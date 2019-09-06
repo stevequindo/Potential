@@ -2,6 +2,7 @@ package com.example.potential.createplan;
 
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 
 
 import com.example.potential.R;
+import com.example.potential.datetimepicker.DateTimePicker;
 import com.google.android.material.button.MaterialButton;
 
 /**
@@ -21,11 +23,17 @@ import com.google.android.material.button.MaterialButton;
  */
 public class CreateDeadlineFragment extends Fragment {
 
-    MaterialButton deadlineButton;
+    private Context context;
+    private MaterialButton deadlineButton;
 
     public CreateDeadlineFragment() {
         // Required empty public constructor
     }
+
+    public CreateDeadlineFragment(Context context) {
+        this.context = context;
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,6 +60,7 @@ public class CreateDeadlineFragment extends Fragment {
      * @param view
      */
     private void setDeadline(View view) {
+        startActivity(new Intent(context, DateTimePicker.class));
 
     }
 
