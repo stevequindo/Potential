@@ -16,6 +16,6 @@
     <string name="purpose_caption">What is your why? Your deeper reason\nto why you want to achieve this goal.</string>
     <string name="purpose_helper_text">e.g \"To be someone my mum would be proud of.\"</string>
     <string name="deadline_caption">Select a time and day.</string>
-    <string name="save_button_text">Save</string>
+    <string name="save_button_text">SAVE</string>
     <string name="cancel_button_text">CANCEL</string>
 </resources>

@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     tools:context=".datetimepicker.DateTimePicker">
 
-    <com.example.datetimepicker.MyViewPager
+    <com.example.potential.datetimepicker.ViewPager
         android:id="@+id/date_time_picker_view_pager"
         android:layout_width="wrap_content"
         android:layout_height="490dp"
@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-    </com.example.datetimepicker.MyViewPager>
+    </com.example.potential.datetimepicker.ViewPager>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/save_button"
@@ -35,7 +35,7 @@
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="78dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="18dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginBottom="8dp"
         android:text="@string/cancel_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
