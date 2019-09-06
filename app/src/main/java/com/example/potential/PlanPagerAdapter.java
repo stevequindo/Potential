@@ -54,6 +54,8 @@ public class PlanPagerAdapter extends PagerAdapter {
 //        imageView = view.findViewById(R.id.image);
 //        imageView.setImageResource(R.drawable.lightbulb);
 
+
+        // THE HECK IS THIS LINE DO
         container.addView(view, 0);
 
 
