@@ -3,10 +3,6 @@ package com.example.potential;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-
 public class Plan implements Parcelable {
 
     private String planName;            // Name of plan.
