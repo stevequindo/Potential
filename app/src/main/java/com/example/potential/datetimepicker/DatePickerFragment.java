@@ -37,7 +37,7 @@ public class DatePickerFragment extends Fragment {
         // They can only choose dates starting from tomorrow.
         datePicker.setMinDate(System.currentTimeMillis() + 86400000 - 1000);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            datePicker.setOnDateChangedListener(new DateTimeListener());
+            datePicker.setOnDateChangedListener(DateTimeListener.getDateTimeListener());
         }
         return view;
     }

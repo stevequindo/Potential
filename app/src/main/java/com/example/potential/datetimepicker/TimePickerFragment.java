@@ -32,7 +32,7 @@ public class TimePickerFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_time_picker, container, false);
 
         TimePicker timePicker = view.findViewById(R.id.time_picker);
-        timePicker.setOnTimeChangedListener(new DateTimeListener());
+        timePicker.setOnTimeChangedListener(DateTimeListener.getDateTimeListener());
 
         return view;
     }

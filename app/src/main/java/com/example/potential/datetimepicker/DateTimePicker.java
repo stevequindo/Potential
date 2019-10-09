@@ -52,9 +52,17 @@ public class DateTimePicker extends AppCompatActivity {
      * @param view
      */
     public void saveButton(View view) {
-        Log.d("poop", "saveButton: pressed!");
+        Log.d("poop", "=====================");
+        Log.d("poop", "Hour: " + DateTimeListener.getDateTimeListener().getHour());
+        Log.d("poop", "Minute: " + DateTimeListener.getDateTimeListener().getMinute());
+        Log.d("poop", "=====================");
+        Log.d("poop", "Year: " + DateTimeListener.getDateTimeListener().getYear());
+        Log.d("poop", "Month: " + DateTimeListener.getDateTimeListener().getMonth());
+        Log.d("poop", "Day Of Month: " + DateTimeListener.getDateTimeListener().getDayOfMonth());
+        Log.d("poop", "=====================");
 
-        // Get current date and time ting
+
+
 
     }
 }
