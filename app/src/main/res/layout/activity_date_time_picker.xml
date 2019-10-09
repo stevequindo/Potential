@@ -15,7 +15,7 @@
 
         <com.google.android.material.tabs.TabLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
     </com.example.potential.datetimepicker.ViewPager>
 
@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
+        android:onClick="saveButton"
         android:text="@string/save_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="8dp"
+        android:onClick="cancelButton"
         android:text="@string/cancel_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/save_button"

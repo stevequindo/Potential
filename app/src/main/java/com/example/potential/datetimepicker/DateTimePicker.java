@@ -3,7 +3,10 @@ package com.example.potential.datetimepicker;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.view.Window;
+import android.widget.DatePicker;
 
 import com.example.potential.R;
 
@@ -33,5 +36,25 @@ public class DateTimePicker extends AppCompatActivity {
         adapter.addFragment("TIME", new TimePickerFragment());
 
         myViewPager.setAdapter(adapter);
+    }
+
+    /**
+     * This method is called when the user presses the cancel button from the date/time picker.
+     * @param view
+     */
+    public void cancelButton(View view) {
+        Log.d("poop", "cancelButton: pressed!");
+    }
+
+    /**
+     * This method is called whe the user presses the save button from the date/time picker.
+     * Saves the current date and time set by the user.
+     * @param view
+     */
+    public void saveButton(View view) {
+        Log.d("poop", "saveButton: pressed!");
+
+        // Get current date and time ting
+
     }
 }

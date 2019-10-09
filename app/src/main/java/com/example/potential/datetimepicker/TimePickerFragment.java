@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
+import android.widget.TimePicker;
 
 import com.example.potential.R;
 
@@ -27,7 +29,12 @@ public class TimePickerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_time_picker, container, false);
+        View view = inflater.inflate(R.layout.fragment_time_picker, container, false);
+
+        TimePicker timePicker = view.findViewById(R.id.time_picker);
+        timePicker.setOnTimeChangedListener(new DateTimeListener());
+
+        return view;
     }
 
 }
